@@ -5,7 +5,6 @@ import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { RxDividerHorizontal } from "react-icons/rx";
 import Image from "next/image";
-import { WidthFull } from "@mui/icons-material";
 
 
 const Navbar = () => {
