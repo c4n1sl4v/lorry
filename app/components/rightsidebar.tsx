@@ -1,6 +1,6 @@
 export default function RightSidebar(){
     return (
-     <div className="hidden lg:block grid place-content-center h-full flex-[0.3]">
+     <div className="hidden h-full place-content-center flex-[0.2] lg:block">
      </div>
     )
 
