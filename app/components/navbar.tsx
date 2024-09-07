@@ -1,12 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import MenuIcon from '@mui/icons-material/Menu';
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import { Button } from "@mui/material";
 import { RxDividerHorizontal } from "react-icons/rx";
-import { Fullscreen } from "@mui/icons-material";
+
 
 const Navbar = () => {
   
