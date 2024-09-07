@@ -20,7 +20,7 @@ const Navbar = () => {
           
           <Link href="/">
           <Image src={"./public/logo - final-01.jpg"} width={210} height={0} alt="logo"/>
-          </Link>s
+          </Link>
 
           <AiOutlineMenuFold onClick={handleNav} size={46} className="p-2 md:hidden"/>
 
