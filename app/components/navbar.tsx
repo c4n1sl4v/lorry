@@ -4,6 +4,8 @@ import Link from "next/link"
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { RxDividerHorizontal } from "react-icons/rx";
+import Image from "next/image";
+import { WidthFull } from "@mui/icons-material";
 
 
 const Navbar = () => {
@@ -18,9 +20,8 @@ const Navbar = () => {
         <div className=" flex py-3 text-xl justify-between px-2">
           
           <Link href="/">
-          <h1 className=" p-2">Lorry</h1>
+          <Image src={"/logo - final-01.jpg"} width={210} height={0} alt="logo"/>
           </Link>
-
 
           <AiOutlineMenuFold onClick={handleNav} size={46} className="p-2 md:hidden"/>
 
