@@ -1,40 +1,52 @@
 "use client"
 
+import * as React from "react"
 import Link from "next/link"
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { RxDividerHorizontal } from "react-icons/rx";
 import Image from "next/image";
+import { ClickAwayListener } from "@mui/material";
 
-
-const Navbar = () => {
+export default function Navbar() {
   
   const [menuOpen, setMenuOpen] = useState(false)
+  
+  
   const handleNav = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen((prev) => !prev)
   }
 
+  const handleClickAway = () => {
+        setMenuOpen(false);
+  }
+
+
     return (
+      <ClickAwayListener onClickAway={handleClickAway}>
       <div className=" sticky top-0 w-full bg-green-600 shadow-xl">
         <div className=" flex py-3 text-xl justify-between px-2">
           
           <Link href="/">
-          <Image src={"/logo - final-01.jpg"} width={210} height={0} alt="logo"/>
+          <Image src={"/logo - final-01.jpg"} width={210} height={0} alt="logo" className=""/>
           </Link>
 
           <AiOutlineMenuFold onClick={handleNav} size={46} className="p-2 md:hidden"/>
-
+          
           <div className="hidden md:flex gap-x-4">
-          <Link href="/" className=" uppercase p-2 hover:bg-gray-800 transition duration-300 rounded-full ">Home</Link>
-          <Link href="/about" className=" uppercase p-2 hover:bg-gray-800 transition duration-300 rounded-full">About Us</Link>
-          <Link href="/demo" className=" uppercase p-2 hover:bg-gray-800 transition duration-300 rounded-full">Demo</Link>
-          <Link href="/" className=" uppercase p-2 px-6 hover:bg-gray-800 transition duration-300 rounded-md bg-gray-700" >Sign Up</Link>
+          <Link href="/" className=" uppercase p-2 hover:bg-gray-800 transition duration-500 rounded-md ">Home</Link>
+          <Link href="/about" className=" uppercase p-2 hover:bg-gray-800 transition duration-500 rounded-md">About Us</Link>
+          <Link href="/demo" className=" uppercase p-2 hover:bg-gray-800 transition duration-500 rounded-md">Demo</Link>
+          <Link href="/" className=" uppercase p-2 px-6 hover:bg-gray-800 transition duration-500 bg-gray-700 rounded-md" >Sign Up</Link>
           </div>
         </div>
-        <div className={
+        
+          
+          <div  className={
           menuOpen ? "fixed left-0 top-0 w-[65%] md:hidden h-screen bg-green-500/80 backdrop-blur-sm ease-in duration-500"
                    : "fixed left-[-100%] top-0 w-[65%] md:hidden h-screen bg-green-500/80 backdrop-blur-sm ease-in duration-500" 
         }>
+          
           <div className="flex w-full items-center justify-end py-4">
             <div onClick={handleNav} className="">
               <AiOutlineClose size={40}/>
@@ -66,8 +78,8 @@ const Navbar = () => {
           
           </div>
         </div>
+        
       </div>
+      </ClickAwayListener>
     );
 };
-export default Navbar;
-
