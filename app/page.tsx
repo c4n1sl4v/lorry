@@ -17,7 +17,7 @@ export default function Home() {
           <Navbar/>
 
           {/* Center */}
-          <div className="text-xl text-black py-4 px-2 ">
+          <div className="text-xl text-black py-4 px-2">
             <h1>Home Page</h1>
 
             

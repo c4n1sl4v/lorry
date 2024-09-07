@@ -19,7 +19,6 @@ export default function Demo() {
           {/* Center */}
           <div className="text-xl text-black py-4 px-2">Demo
           </div>
-          <div className=" h-[100%]"/>
 
 
           <Footer/>
