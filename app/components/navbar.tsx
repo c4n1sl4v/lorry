@@ -19,8 +19,8 @@ const Navbar = () => {
         <div className=" flex py-3 text-xl justify-between px-2">
           
           <Link href="/">
-          <Image src={"/public/logo - final-01.jpg"} width={210} height={0} alt="logo"/>
-          </Link>
+          <Image src={"./public/logo - final-01.jpg"} width={210} height={0} alt="logo"/>
+          </Link>s
 
           <AiOutlineMenuFold onClick={handleNav} size={46} className="p-2 md:hidden"/>
 
