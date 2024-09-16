@@ -18,7 +18,7 @@ export default function Home() {
 
           {/* Center */}
           <div className="text-xl text-black py-4 px-2">
-            <h1>Home Page</h1>
+            <h1>Home 1Page</h1>
 
             
           </div>
